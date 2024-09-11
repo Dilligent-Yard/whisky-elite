@@ -240,7 +240,7 @@ header img:hover {
 
 @media (max-width: 768px) {
     .hero h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .product-card {
@@ -248,7 +248,7 @@ header img:hover {
     }
 
     .product-card h3 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .product-card p {
@@ -256,13 +256,13 @@ header img:hover {
     }
 
     .product-card .text-2xl {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
 }
 
 @media (max-width: 640px) {
     .hero h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .product-card {
@@ -270,7 +270,7 @@ header img:hover {
     }
 
     .product-card h3 {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     .product-card p {
