@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisky Elite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white font-sans">
+    <header class="bg-black bg-opacity-80 py-4 fixed w-full z-10 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="flex items-center space-x-3 group">
+                <img src="logo.png" alt="Whisky Elite Logo" class="w-12 h-12 rounded-full transition-transform duration-300 group-hover:scale-110">
+                <h1 class="text-3xl font-serif font-bold text-gold transition-colors duration-300 group-hover:text-white">Whisky Elite</h1>
+            </a>
+            <nav class="hidden lg:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="nav-link">Início</a></li>
+                    <li><a href="#collection" class="nav-link">Coleção</a></li>
+                    <li><a href="historia.html" class="nav-link">História</a></li>
+                    <li><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center space-x-6">
+                <a href="#" class="text-gold hover:text-white transition duration-300 hidden md:block">
+                    <i class="fas fa-search text-lg"></i>
+                </a>
+                <a href="compra.html" class="text-gold hover:text-white transition duration-300 relative hidden md:block">
+                    <i class="fas fa-shopping-cart text-lg"></i>
+                    <span class="absolute -top-2 -right-2 bg-gold text-black text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                </a>
+                <button id="mobile-menu-button" class="lg:hidden text-gold hover:text-white transition duration-300">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-black bg-opacity-95 mt-4 py-4 hidden">
+            <nav class="container mx-auto px-4">
+                <ul class="space-y-4">
+                    <li><a href="#" class="block nav-link">Início</a></li>
+                    <li><a href="#collection" class="block nav-link">Coleção</a></li>
+                    <li><a href="historia.html" class="block nav-link">História</a></li>
+                    <li><a href="contato.html" class="block nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero h-screen flex items-center justify-center bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1582819509237-d36a91f62c4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="text-center relative z-10">
+                <h2 class="text-7xl font-serif font-bold mb-6 text-gold leading-tight">Experiência Sublime</h2>
+                <p class="text-2xl mb-10 font-light">Descubra a excelência em cada gota</p>
+                <a href="#collection" class="bg-gold text-black px-10 py-4 uppercase text-sm tracking-widest font-bold hover:bg-white transition duration-300 rounded-sm shadow-lg hover:shadow-xl transform hover:-translate-y-1">Explorar Coleção</a>
+            </div>
+        </section>
+
+        <section id="collection" class="py-32 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-6xl font-serif font-bold mb-20 text-center text-gold">Nossa Coleção Exclusiva</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                    <div class="product-card group p-8">
+                        <div class="relative overflow-hidden mb-8">
+                            <img src="https://primoliquorsweston.com/cdn/shop/products/zb7lc8g2kbzbru8ftwxw.png?v=1701791592" alt="Hibiki Harmony" class="w-full h-96 object-contain product-image transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-gold text-black px-8 py-3 uppercase text-sm tracking-widest font-bold hover:bg-white transition duration-300 rounded-sm">Ver Detalhes</button>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold mb-3 text-gold">Hibiki Harmony</h3>
+                        <p class="mb-5 text-gray-400 text-sm leading-relaxed">Um uísque japonês excepcional, conhecido por sua harmonia e complexidade.</p>
+                        <p class="text-2xl font-bold mb-6 text-gold">R$ 9.000,00</p>
+                        <button class="w-full bg-gold text-black py-3 uppercase text-sm tracking-widest font-bold hover:bg-white transition duration-300 rounded-sm add-to-cart-btn" data-produto="Hibiki Harmony" data-preco="9000">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product-card group p-8">
+                        <div class="relative overflow-hidden mb-8">
+                            <img src="https://www.emporiofreicaneca.com.br/wp-content/uploads/2019/12/Whisky-Royal-Salute-The-Malts-Blend-21-anos-700-ml.png" alt="Royal Salute The Malts Blend 21 Years" class="w-full h-96 object-contain product-image transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-gold text-black px-8 py-3 uppercase text-sm tracking-widest font-bold hover:bg-white transition duration-300 rounded-sm">Ver Detalhes</button>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold mb-3 text-gold">Royal Salute The Malts Blend 21 Years</h3>
+                        <p class="mb-5 text-gray-400 text-sm leading-relaxed">Um blend luxuoso de maltes envelhecidos por no mínimo 21 anos.</p>
+                        <p class="text-2xl font-bold mb-6 text-gold">R$ 1.500,00</p>
+                        <button class="w-full bg-gold text-black py-3 uppercase text-sm tracking-widest font-bold hover:bg-white transition duration-300 rounded-sm add-to-cart-btn" data-produto="Royal Salute The Malts Blend 21 Years" data-preco="1500">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product-card group p-8">
+                        <div class="relative overflow-hidden mb-8">
+                            <img src="https://www.emporiofreicaneca.com.br/wp-content/uploads/2021/11/kit-paulistania-degustacao-3.png" alt="Polo Estancia Royal Salute" class="w-full h-96 object-contain product-image transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-gold text-black px-8 py-3 uppercase text-sm tracking-widest font-bold hover:bg-white transition duration-300 rounded-sm">Ver Detalhes</button>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold mb-3 text-gold">Polo Estancia Royal Salute</h3>
+                        <p class="mb-5 text-gray-400 text-sm leading-relaxed">Uma edição especial do Royal Salute, inspirada no esporte do polo.</p>
+                        <p class="text-2xl font-bold mb-6 text-gold">R$ 1.500,00</p>
+                        <button class="w-full bg-gold text-black py-3 uppercase text-sm tracking-widest font-bold hover:bg-white transition duration-300 rounded-sm add-to-cart-btn" data-produto="Polo Estancia Royal Salute" data-preco="1500">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="text-center mt-16">
+                    <a href="catalogo.html" class="bg-gold text-black px-8 py-4 uppercase text-sm tracking-widest font-bold hover:bg-white transition duration-300 rounded-sm inline-block catalog-button">
+                        Acesse o Catálogo Completo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-black">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-5xl font-serif font-bold mb-20 text-gold">A Excelência do Whisky Elite</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                    <div class="group">
+                        <div class="mb-8 relative">
+                            <i class="fas fa-award text-6xl text-gold mb-6 transition-transform duration-300 group-hover:scale-110"></i>
+                            <div class="h-1 w-0 bg-gold absolute bottom-0 left-1/2 transform -translate-x-1/2 transition-all duration-300 group-hover:w-1/2"></div>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold mb-4">Qualidade Premium</h3>
+                        <p class="text-gray-400 text-base leading-relaxed">Selecionamos apenas os melhores uísques do mundo para nossa coleção.</p>
+                    </div>
+                    <div class="group">
+                        <div class="mb-8 relative">
+                            <i class="fas fa-shipping-fast text-6xl text-gold mb-6 transition-transform duration-300 group-hover:scale-110"></i>
+                            <div class="h-1 w-0 bg-gold absolute bottom-0 left-1/2 transform -translate-x-1/2 transition-all duration-300 group-hover:w-1/2"></div>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold mb-4">Entrega Rápida</h3>
+                        <p class="text-gray-400 text-base leading-relaxed">Enviamos seu pedido com cuidado e rapidez para todo o Brasil.</p>
+                    </div>
+                    <div class="group">
+                        <div class="mb-8 relative">
+                            <i class="fas fa-user-tie text-6xl text-gold mb-6 transition-transform duration-300 group-hover:scale-110"></i>
+                            <div class="h-1 w-0 bg-gold absolute bottom-0 left-1/2 transform -translate-x-1/2 transition-all duration-300 group-hover:w-1/2"></div>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold mb-4">Atendimento Especializado</h3>
+                        <p class="text-gray-400 text-base leading-relaxed">Nossa equipe de especialistas está pronta para ajudar em sua escolha.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto text-center">
+            <p class="mb-6 text-sm">&copy; 2023 Whisky Elite. Todos os direitos reservados.</p>
+            <div class="flex justify-center space-x-8">
+                <a href="#" class="text-gold hover:text-white transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gold hover:text-white transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gold hover:text-white transition duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
