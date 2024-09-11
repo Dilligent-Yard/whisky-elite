@@ -1,6 +1,9 @@
 function toggleMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenu.classList.toggle('hidden');
+    if (mobileMenu) {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.style.display = mobileMenu.classList.contains('hidden') ? 'none' : 'block';
+    }
 }
 
 function updateCartCount(count) {
